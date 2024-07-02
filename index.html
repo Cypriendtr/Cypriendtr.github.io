@@ -1,2 +1,99 @@
 <!DOCTYPE html>
-<html></html>
+<!doctype html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/template/Image/favicon.ico">
+    <link rel="stylesheet" href="template/style.css" />
+    <link rel="flickity" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
+
+<html>
+    <!-- JS Script for interactive page title name -->
+    <title>Cyprien Dautrevaux</title>
+    <script>
+    let docTitle = document.title;
+    window.addEventListener ("blur", () =>{
+    document. title = "Come back 🥲";})
+
+    window.addEventListener ("focus", () =>{
+    document. title = docTitle;}) 
+    </script> 
+
+  <!-- Body -->
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+
+        <!-- Page header & menu  -->
+        <div class="wrapper">
+            <div class="page-header">
+                <ul class="menu">
+                    <li><a href="/index.html">Homepage</a></li>
+                    <li><a href="/Pages/CV.html">CV</a></li>
+                    <li><a href="">Project</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="gallery js-flickity"
+            data-flickity-options='{ "wrapAround": true }'>
+            <div class="gallery-cell">
+                <img class="carousel-image" src="\template\Image\Carousel\Lambesc summer 2023.jpeg" />
+                <div class="picture_info" > Sunset picture of a wineyard, Lambesc Provence</div>
+            </div>
+            <div class="gallery-cell">
+                <img class="carousel-image" src="\template\Image\Carousel\Frioul_summer.jpg" />
+                <div class="picture_info" > Sunset in Frioul island, Marseille Provence</div>
+            </div>
+            <div class="gallery-cell">
+                <img class="carousel-image" src="\template\Image\Carousel\Lavender_field.jpeg" />
+                <div class="picture_info" > Lavender field, St-Didier Provence</div>
+            </div>
+            
+            <div class="gallery-cell">
+                <img class="carousel-image" src="\template\Image\Carousel\Veyne_montaigne.jpg" />
+                <div class="picture_info" > Sunset in Veynes, Alpes de Haute Provence</div>
+            </div>
+            <div class="gallery-cell">
+                <img class="carousel-image" src="\template\Image\Carousel\Lacoste_spider.jpg" />
+                <div class="picture_info" > Chateau Lacoste's Louise Bourgeois Crouching spider, Puy St-reparade Provence</div>
+            </div>
+        </div>
+
+        <div class="main_wrapper"> 
+            <div class="main_container">
+                <div class="info_perso">
+                    <br>
+                    <h1>Cyprien DAUTREVAUX</h1>
+                    <p>
+                        <a href="mailto: cyprien.dautrevaux@etu.univ-amu.fr">cyprien.dautrevaux@etu.univ-amu.fr</a>
+                        <br><br>
+                    </p>
+                    <h3>PhD Student in Computational Neuroscience</h3> <br>
+                    Timone faculty 
+                    <br>
+                    Aix-Marseille University (AMU), France
+
+                    <br>
+                    <div class = "info_perso">
+                        Under the joint supervision of Dr <a href="https://ins-amu.fr/staff-gallery/ david-o">Olivier DAVID</a> at the INS in the <a href="https://ins-amu.fr/neurostim">NeuroStim</a> team and Dr <a href="https://matthieugilson.eu/index.html">Matthieu GILSON</a> at the INT in the <a href="https://brainets.github.io/members.html">BraiNets</a> team.
+                    </div>
+                    
+                </div>
+
+                <div class="image_perso">
+                    <img src="template/Image/Image_perso.jpeg" alt="photo_id">
+                </div>
+            </div>
+        </div> 
+
+        <!-- Page footer -->
+        <div class="wrapper">
+            <div class="page-footer" style = "justify-content: center;">
+                © Copyright Cyprien Dautrevaux 2024
+            </div>
+        </div>
+
+    </body>
