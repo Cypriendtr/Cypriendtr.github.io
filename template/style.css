@@ -1,6 +1,8 @@
 /*------------------ All Pages Style ------------------*/
 body{
     background-color: rgb(231, 222, 213);
+    height: inherit;
+    width: inherit;
     place-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif ;
@@ -12,7 +14,7 @@ body{
 html{
     height: 100vh;
     width: 100vw;
-    background-color: #fff;
+    background-color:  rgb(231, 222, 213);
     max-height: none;
 }
 head{
@@ -29,6 +31,7 @@ link{
   flex: auto;
   
 }
+
 .menu li{list-style: none;
     display: block;
 }
@@ -48,7 +51,7 @@ text-decoration: none;
 /*------------------  Navigation bar ------------------*/
 .wrapper {
     box-sizing: border-box;
-    height: inherit;
+    height: auto;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -61,8 +64,10 @@ text-decoration: none;
     flex-grow: 0;
     flex-shrink: 0;
     min-height: 8vh;
+    padding: 20px;
+    height: inherit;
     width: 70vw;
-    color: bla;
+    color: black;
     display: flex;
     background-color: inherit;
     place-items: center;
@@ -79,24 +84,27 @@ text-decoration: none;
 
 .main_wrapper{
     background-color: rgb(233, 207, 180);
-    height: inherit;
+    height: fit-content;
     width: 100vw;
     display: flex;
     flex-direction: column;
     place-items: center;
+    padding-bottom: 20px;
 }
 
 .main_container{
     background-color: inherit;
     width: 70vw;
+    height: fit-content;
     margin-top: 40px ;
     display: flex ;
 }    
 
 .info_perso{
     float: left; 
-    width: 80%;
+    width: fit-content;
     font-size: 18px;
+    height: inherit;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color:black;
@@ -125,22 +133,24 @@ text-decoration: none;
         display: flex;
         margin: 1px;
         float: right;
-        width: 230px;
+        width: inherit;
     }
     
     div.image_perso img {
-        width: 90%;
-        height: auto;
+        padding-left: 40px;
+        width: 100%;
+        height: inherit;
     }
 }
 /*------------------  Hompage styling carousel ------------------*/
 
 .gallery {
     background: inherit;
+    height: fit-content;
   }
   .gallery-cell {
     width: 70vw;
-    height: 50vh;
+    height: auto;
     place-items: center;
     justify-items: center;
     margin-right: 5px;
@@ -171,7 +181,7 @@ text-decoration: none;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5); 
     color: #f1f1f1;
-    width: 100%;
+    width: inherit;
     font-family: Arial, Helvetica, sans-serif;
     transition: .5s ease;
     opacity:0;
@@ -189,6 +199,79 @@ text-decoration: none;
     height: auto;
     max-height: 100%;}
 
+
+/*------------------ Project ------------------*/
+.main-project{
+  position: relative;
+  display: table-row;
+  height: auto;
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 60px;
+}
+
+.project_div{
+  padding-top: 20px;
+}
+
+.main_container_project{
+  background-color: inherit;
+  width: 70vw;
+  height: auto;
+  display: flex ;
+  flex-direction: column;
+}
+
+.project_detail_button{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  transition-duration: 0.4s;
+  background-color: transparent;
+  color: black;
+  border: 2px solid rgb(227, 156, 118);
+  border-radius: 12px;
+}
+
+.project_detail_button:hover {
+  background-color: rgb(227, 156, 118);
+}
+
+.small_project_description{
+  display: flex;
+  height: fit-content;
+  padding-right: 8px;
+}
+
+.project_img_div{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+}
+
+.project_img{
+  height: inherit;
+  width: auto;
+
+}
+
+.main-project_reversed{
+  position: relative;
+  display: table-row;
+  height: fit-content;
+  width: inherit;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-bottom: 60px;
+}
 /*------------------  CV ------------------*/
   
 section {
@@ -291,9 +374,6 @@ section {
       top: -24px;
       left: -78px;
     }
-  }
-  h3 {
-    margin-top: 20px ;
   }
   
   .experience {
