@@ -89,6 +89,7 @@ text-decoration: none;
     display: flex;
     flex-direction: column;
     place-items: center;
+    align-items: center;
     padding-bottom: 20px;
 }
 
@@ -97,12 +98,22 @@ text-decoration: none;
     width: 70vw;
     height: fit-content;
     margin-top: 40px ;
-    display: flex ;
+
+}    
+
+.main_container_homepage:after{
+  background-color: inherit;
+  width: 70vw;
+  height: fit-content;
+  margin-top: 40px ;
+  content: "";
+  display: table;
+  clear: both;
 }    
 
 .info_perso{
     float: left; 
-    width: fit-content;
+    width: 70%;
     font-size: 18px;
     height: inherit;
     text-decoration: none;
@@ -128,19 +139,23 @@ text-decoration: none;
 }
 
 @media screen and (min-width: 830px){
+
     div.image_perso {
         position: relative;
         display: flex;
         margin: 1px;
-        float: right;
-        width: inherit;
+        width: auto;
     }
     
     div.image_perso img {
-        padding-left: 40px;
+        padding-left: 30px;
+        display: flex;
+        position: relative;
         width: 100%;
+        float: right;
         height: inherit;
-    }
+        max-height: 30%;
+          }
 }
 /*------------------  Hompage styling carousel ------------------*/
 
