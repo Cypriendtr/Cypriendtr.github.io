@@ -289,6 +289,10 @@ text-decoration: none;
   flex-direction: row-reverse;
   padding-bottom: 60px;
 }
+
+.project_content{
+  padding-top: 20px;
+}
 /*------------------  CV ------------------*/
   
 section {

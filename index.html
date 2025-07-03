@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!doctype html>
+<html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="template/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
     <link rel="flickity" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Cyprien Dautrevaux</title>
+
+    <!-- JS pour le titre dynamique -->
+    <script>
+        let docTitle = document.title;
+        window.addEventListener("blur", () => {
+            document.title = "Come back 🥲";
+        });
+        window.addEventListener("focus", () => {
+            document.title = docTitle;
+        });
+    </script>
 </head>
 
-<html>
-    <!-- JS Script for interactive page title name -->
-    <title>Cyprien Dautrevaux</title>
-    <script>
-    let docTitle = document.title;
-    window.addEventListener ("blur", () =>{
-    document. title = "Come back 🥲";})
-
-    window.addEventListener ("focus", () =>{
-    document. title = docTitle;}) 
-    </script> 
-
-  <!-- Body -->
+<!-- Body -->
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
 
@@ -95,7 +95,7 @@
         <!-- Page footer -->
         <div class="wrapper">
             <div class="page-footer" style = "justify-content: center;">
-                © Copyright Cyprien Dautrevaux 2024
+                © Copyright Cyprien Dautrevaux 2025
             </div>
         </div>
     </body>

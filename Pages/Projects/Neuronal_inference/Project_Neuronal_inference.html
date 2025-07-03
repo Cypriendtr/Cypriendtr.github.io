@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyprien Dautrevaux</title>
+  <link rel="icon" type="image/x-icon" href="/template/Image/favicon.ico">
+  <link rel="stylesheet" href="/template/style.css" />
+
+  <!-- Titre dynamique -->
+  <script>
+    let docTitle = document.title;
+    window.addEventListener("blur", () => {
+      document.title = "Come back 🥲";
+    });
+    window.addEventListener("focus", () => {
+      document.title = docTitle;
+    });
+  </script>
+
+  <!-- Marked.js pour parser le Markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Page header & menu  -->
+    <div class="wrapper">
+        <div class="page-header">
+        <ul class="menu">
+            <li><a href="/index.html">Homepage</a></li>
+            <li><a href="/Pages/CV.html">CV</a></li>
+            <li><a href="/Pages/Project.html">Project</a></li>
+            <li><a href="/Pages/Contact.html">Contact</a></li>
+        </ul>
+        </div>
+    </div>
+
+
+    <div class="main_wrapper">
+        <div class="main_container">
+            <div id="content" class="project_content" >
+                Loading info
+            </div>
+        </div>
+    </div>
+
+    <!-- Page footer -->
+    <div class="wrapper">
+        <div class="page-footer" style = "justify-content: center;">
+            © Copyright Cyprien Dautrevaux 2025
+        </div>
+    </div>
+
+  <!-- Script de chargement du fichier Markdown -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get('file');
+
+    const contentDiv = document.getElementById('content');
+
+    if (!file) {
+      contentDiv.innerHTML = "<p>Missing file.</p>";
+    } else {
+      fetch(file)
+        .then(res => {
+          if (!res.ok) throw new Error("No file found.");
+          return res.text();
+        })
+        .then(text => {
+          contentDiv.innerHTML = marked.parse(text);
+        })
+        .catch(err => {
+          contentDiv.innerHTML = "<p>Error : " + err.message + "</p>";
+        })
+        .then(text => {
+            contentDiv.innerHTML = marked.parse(text);
+            if (window.MathJax) {
+                 MathJax.typeset();}
+})
+;
+    }
+  </script>
+
+</body>
+</html>
+
+
+
