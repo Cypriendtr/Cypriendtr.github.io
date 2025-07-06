@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyprien Dautrevaux</title>
@@ -20,20 +20,8 @@
 
   <!-- Marked.js pour parser le Markdown -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
-</head>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+  </head>
 
 <body>
 
@@ -65,35 +53,26 @@
         </div>
     </div>
 
-  <!-- Script de chargement du fichier Markdown -->
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const file = urlParams.get('file');
 
     const contentDiv = document.getElementById('content');
-
     if (!file) {
-      contentDiv.innerHTML = "<p>Missing file.</p>";
-    } else {
+      contentDiv.innerHTML = "<p>Missing file.</p>";}
+
+    else {
       fetch(file)
-        .then(res => {
-          if (!res.ok) throw new Error("No file found.");
-          return res.text();
-        })
+      .then(res => {
+        if (!res.ok) throw new Error("No file found.");
+        return res.text();})
+
         .then(text => {
           contentDiv.innerHTML = marked.parse(text);
-        })
-        .catch(err => {
-          contentDiv.innerHTML = "<p>Error : " + err.message + "</p>";
-        })
-        .then(text => {
-            contentDiv.innerHTML = marked.parse(text);
-            if (window.MathJax) {
-                 MathJax.typeset();}
-})
-;
-    }
-  </script>
+          if (window.MathJax && window.MathJax.typeset) {
+            MathJax.typeset();}})
+            .catch(err => {contentDiv.innerHTML = "<p>Error : " + err.message + "</p>";})}
+    </script>
 
 </body>
 </html>

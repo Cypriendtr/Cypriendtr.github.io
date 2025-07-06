@@ -293,6 +293,10 @@ text-decoration: none;
 .project_content{
   padding-top: 20px;
 }
+.project_content h2, .project_content h3{
+  padding-top: 20px;
+}
+
 /*------------------  CV ------------------*/
   
 section {

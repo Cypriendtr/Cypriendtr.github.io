@@ -15,8 +15,9 @@ We propose a computational method that combine neuronal modeling with Bayesian i
 
 ## Model equations
 **Model in a Nutshell** 
-Membran potential equation:  $$C_m\frac{dV}{dt} = -\sum{I_m}$$
 
+
+Membran potential equation:  $$C_m\frac{dV}{dt} = -\sum{I_m}$$
 
 
 Current equations : $$ I_i = g_i.n_i.h_i.(V-E_i)$$
